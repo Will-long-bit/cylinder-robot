@@ -8,8 +8,6 @@
 - **PID 控制** 与 **模型预测控制（MPC）** 两种轨迹跟踪算法
 - 多组实验对比 KF 的定位效果，以及 PID 与 MPC 在不同场景下的跟踪性能
 
-> 本项目为教学 / 课程实验用途，所有代码在 Gazebo 仿真中运行，无需真实硬件。
-
 ---
 
 ## 系统架构
@@ -74,17 +72,6 @@ project/
 | MPC 迷宫 | `controller.py`（实为 mpc_maze） | cvxpy 二次优化，预测 15 步，力限 ±20 | 同一迷宫，前瞻优化走直角 |
 | MPC 图像 | `mpc_image_controller.py` | cvxpy，预测 30 步；从 PNG 提取轮廓→重采样→三次样条插值生成轨迹 | 自定义图像轮廓（默认 `ufo.png`） |
 | 手动遥控 | `teleopCylinder.launch` | 键盘遥控，配 RViz | — |
-
-### 演示视频
-
-演示视频体积较大（合计约 1.2GB），未纳入本仓库，请通过以下链接观看（占位，待补充网盘 / B 站链接）：
-
-| 视频 | 对应控制器 | 链接 |
-|------|-----------|------|
-| PID 走矩形 | `pid_rectangle_controller.py` | _待补充_ |
-| PID 走迷宫 | `pid_maze_controller.py` | _待补充_ |
-| MPC 走迷宫 | `controller.py`（MPC maze） | _待补充_ |
-| MPC 图片轨迹 | `mpc_image_controller.py` | _待补充_ |
 
 ---
 
